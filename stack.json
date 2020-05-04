@@ -1,0 +1,904 @@
+{
+    "version": 3,
+    "deployment": {
+        "manifest": {
+            "time": "2020-05-04T13:31:30.732857+03:00",
+            "magic": "a6fd69e48a481181b0daaac2d424a83659a05dc4c918ef17e6aac513adb37330",
+            "version": "v2.1.0"
+        },
+        "secrets_providers": {
+            "type": "passphrase",
+            "state": {
+                "salt": "v1:XQmgCn+fNM4=:v1:oX/cVmD32thPQjL0:WDXBwqyy33iGTWTTHxqjQUgUrnZIDg=="
+            }
+        },
+        "resources": [
+            {
+                "urn": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "custom": false,
+                "type": "pulumi:pulumi:Stack",
+                "outputs": {
+                    "kubeconfig": {
+                        "apiVersion": "v1",
+                        "clusters": [
+                            {
+                                "cluster": {
+                                    "certificate-authority-data": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01EVXdOREE0TURNME9Gb1hEVE13TURVd01qQTRNRE0wT0Zvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTzlHCkRHODJucmFlaTlkMG9ZdUNoSVEyRUx6MWN0TXI0UldTL0pQT0pFSU9RV1pvUVBkR3FUbnJLc3lZOVd3MVFxVGsKVmYzaVAwVlFjWXA4VGRQRUY2SUFoNDh5b2J0amdRdk1CeXdldTk3N3JLMGl5SzVDSkRUVy93T0NyRDRXM3ZrQQpWWUFFRjVjcWcrb3o1WXN6dDRFU0lBaER1YU5nQnBtWHA1R3ptelMvS1E3VHJEL1pWOTVId3I3N05iOGs1N1dnCnRtcnp0Q0JzWXBBV1Q2a1dNRjIzcXdqanpHT2o3WXk3N2ZEakRiS0lIVWRXN0FZWmczQUxSMjFybWNYYU5Za2oKUldmS3VFcGhISjB1MGhjRklQZkVDYzNKZlM0VFg5MkEwcjJwT0Y1UEptTG1mc3hFSGFwVUpyTS9OTkFKL0dsbQpXSStyNTZGS1dsTUZFWmVEZ09zQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFKc3pkQjBKRWp4WVBoTzhIT1lPOHNmaGF1Qm8KbGtMeEFyeFNLM2dXM0tvR0dnUFAxNTUwaW5SN3V0dW1IVS9UWnd6RFoxNTZjTXF4WFQvYm1Wb0xPT3NtSFlJNwpKdUNiblQrdy9WMjM5bG96ZnQxbjQzZk1CcEdwSEtncXhqRS9rRExpR0sxamMxTDM0Sk01d0NjcXV2UFgrMnJGCnRwdHEzKytHRjJmT0U4OFdmOWF6bmFJNVV4QzhJUHVKWHdXQm80SGhYZFFRSnF5SFJlaHZ3OVBIVC8xLzNnMlUKZ1JnODg5Vmpwd0dxNUFLQng2ZjFLT2plcFZNSE8zWjQxeWZNNGNPa0Q1Mnc2dHFEZTBaVy84dmZad2hIRU5GMgo2TXlTQndHeWNIZkJyV1JXNk9zR3JHS0pqMkR2a2x6aTMyZHJEY2J0R1hPdkJ6eVRSbko5MVhaRldRQT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=",
+                                    "server": "https://CE9E93CA3DDEBD0569F026D277CABC8C.sk1.eu-west-2.eks.amazonaws.com"
+                                },
+                                "name": "kubernetes"
+                            }
+                        ],
+                        "contexts": [
+                            {
+                                "context": {
+                                    "cluster": "kubernetes",
+                                    "user": "aws"
+                                },
+                                "name": "aws"
+                            }
+                        ],
+                        "current-context": "aws",
+                        "kind": "Config",
+                        "users": [
+                            {
+                                "name": "aws",
+                                "user": {
+                                    "exec": {
+                                        "apiVersion": "client.authentication.k8s.io/v1alpha1",
+                                        "args": [
+                                            "eks",
+                                            "get-token",
+                                            "--cluster-name",
+                                            "8200-cluster-eksCluster-1c992c9"
+                                        ],
+                                        "command": "aws"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "vpcId": "vpc-0bf0ab8f53ce8602a",
+                    "vpnEndpoint": "*.cvpn-endpoint-0410ef24ab71267c6.prod.clientvpn.eu-west-2.amazonaws.com"
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::pulumi:providers:aws::default_1_31_0",
+                "custom": true,
+                "id": "85d733da-f72b-4fcb-bc40-3e40f564a1d3",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "region": "eu-west-2",
+                    "version": "1.31.0"
+                },
+                "outputs": {
+                    "region": "eu-west-2",
+                    "version": "1.31.0"
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0",
+                "custom": true,
+                "id": "e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "type": "pulumi:providers:aws",
+                "inputs": {
+                    "region": "eu-west-2",
+                    "version": "2.2.0"
+                },
+                "outputs": {
+                    "region": "eu-west-2",
+                    "version": "2.2.0"
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:acm/certificate:Certificate::pAuthenticationCertificate",
+                "custom": true,
+                "id": "arn:aws:acm:eu-west-2:027065296145:certificate/505dbf40-f708-4ebb-9a89-b735417a707b",
+                "type": "aws:acm/certificate:Certificate",
+                "inputs": {
+                    "__defaults": [],
+                    "certificateAuthorityArn": "",
+                    "certificateBody": "Certificate:\n    Data:\n        Version: 3 (0x2)\n        Serial Number:\n            e1:34:ae:22:d1:6b:64:d9:b5:45:42:1a:df:15:be:fd\n    Signature Algorithm: sha256WithRSAEncryption\n        Issuer: CN=bobo.com\n        Validity\n            Not Before: May  3 21:13:02 2020 GMT\n            Not After : Aug  6 21:13:02 2022 GMT\n        Subject: CN=server\n        Subject Public Key Info:\n            Public Key Algorithm: rsaEncryption\n                Public-Key: (2048 bit)\n                Modulus:\n                    00:bc:85:e4:8b:e4:e1:eb:07:da:be:34:01:c9:c1:\n                    ce:e3:40:c5:c3:6f:e2:ac:5d:d4:46:33:99:ce:33:\n                    4e:3c:c6:82:e0:82:10:13:f4:59:2c:92:4a:b5:0b:\n                    49:4c:c9:ab:4e:ad:3b:2e:c5:ee:0e:06:2b:c4:55:\n                    ed:e5:80:dd:cd:ee:19:e0:77:e2:3d:c6:39:79:7b:\n                    ae:1e:f9:7b:c0:ea:d4:15:c7:5c:5c:81:55:4a:a2:\n                    44:8b:42:7b:8f:83:35:d1:f8:35:07:49:e9:6f:b8:\n                    c0:51:06:11:50:a7:65:f9:4b:8d:27:e8:ac:85:3a:\n                    17:d4:d4:6a:74:d5:b9:c6:21:59:32:45:8c:8a:23:\n                    95:22:eb:54:94:69:cc:10:c1:20:6f:45:b0:4e:a6:\n                    c5:b0:e9:b1:7e:08:53:8d:fe:23:13:35:c2:4f:4a:\n                    b8:37:01:1c:ea:a8:98:49:f0:f3:97:af:bd:24:d9:\n                    4f:56:f2:9b:cb:06:a4:25:2f:86:fa:41:80:a0:a2:\n                    1b:91:9a:fa:ee:d6:37:3e:89:d5:ff:42:f9:c1:db:\n                    6e:74:41:f3:36:34:bb:7e:9b:2a:71:e3:7b:d0:fe:\n                    53:2b:6b:17:19:63:48:10:f0:12:f7:e9:43:0f:d8:\n                    df:d7:d5:8a:e6:b3:ee:fb:de:41:3e:f6:15:38:fd:\n                    37:65\n                Exponent: 65537 (0x10001)\n        X509v3 extensions:\n            X509v3 Basic Constraints: \n                CA:FALSE\n            X509v3 Subject Key Identifier: \n                B2:87:E5:FB:D6:EE:A2:16:55:8B:EC:D2:43:BF:4C:82:82:15:D1:22\n            X509v3 Authority Key Identifier: \n                keyid:AF:08:60:32:D7:C4:3D:F5:36:C5:DC:46:D9:C2:73:DF:D0:FD:1A:AF\n                DirName:/CN=bobo.com\n                serial:8F:F8:F9:FB:AD:88:6B:17\n\n            X509v3 Extended Key Usage: \n                TLS Web Server Authentication\n            X509v3 Key Usage: \n                Digital Signature, Key Encipherment\n            X509v3 Subject Alternative Name: \n                DNS:server\n    Signature Algorithm: sha256WithRSAEncryption\n         63:7f:4b:32:99:eb:c0:40:0c:17:23:79:f4:75:19:06:62:98:\n         1a:fc:fe:0b:93:0c:5d:73:f5:71:16:2f:9a:2c:aa:21:2e:66:\n         07:b2:5e:52:3d:9d:5f:6f:60:ce:c4:74:a6:d3:e4:65:f1:0c:\n         0d:00:86:58:88:af:d2:a4:48:d4:7e:0e:9c:cc:88:bf:c9:4c:\n         b1:51:b1:8c:b8:98:c9:4e:44:1d:77:eb:5b:6e:2b:00:f8:53:\n         ac:80:b8:99:61:9c:8f:5b:c6:c2:84:88:e3:e0:98:2b:2c:78:\n         a3:bb:63:28:b1:2a:7c:cc:e6:54:ef:94:12:13:ae:5e:48:02:\n         a3:4b:ae:14:2d:92:f1:14:9b:41:a9:98:c2:1e:1f:2c:43:da:\n         57:e2:b0:6f:a4:dc:cb:0c:f7:51:d9:1b:46:b0:43:87:f7:7b:\n         81:20:6a:f4:00:75:27:ae:19:1c:ea:ad:a5:a4:b3:e5:52:86:\n         fa:96:c0:49:6e:49:d9:10:21:ef:e9:6a:ce:4b:87:f6:83:80:\n         96:fd:63:a3:5d:2f:16:37:1c:db:dd:a3:b1:5a:39:44:72:ec:\n         d1:69:df:1a:96:7e:83:93:14:2e:72:5a:d5:17:43:bd:e6:4d:\n         44:16:ae:32:bd:f7:54:4d:2c:e1:c9:34:05:dd:7a:e7:ae:4c:\n         ed:2f:e0:c4\n-----BEGIN CERTIFICATE-----\nMIIDVzCCAj+gAwIBAgIRAOE0riLRa2TZtUVCGt8Vvv0wDQYJKoZIhvcNAQELBQAw\nEzERMA8GA1UEAwwIYm9iby5jb20wHhcNMjAwNTAzMjExMzAyWhcNMjIwODA2MjEx\nMzAyWjARMQ8wDQYDVQQDDAZzZXJ2ZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw\nggEKAoIBAQC8heSL5OHrB9q+NAHJwc7jQMXDb+KsXdRGM5nOM048xoLgghAT9Fks\nkkq1C0lMyatOrTsuxe4OBivEVe3lgN3N7hngd+I9xjl5e64e+XvA6tQVx1xcgVVK\nokSLQnuPgzXR+DUHSelvuMBRBhFQp2X5S40n6KyFOhfU1Gp01bnGIVkyRYyKI5Ui\n61SUacwQwSBvRbBOpsWw6bF+CFON/iMTNcJPSrg3ARzqqJhJ8POXr70k2U9W8pvL\nBqQlL4b6QYCgohuRmvru1jc+idX/QvnB2250QfM2NLt+mypx43vQ/lMraxcZY0gQ\n8BL36UMP2N/X1Yrms+773kE+9hU4/TdlAgMBAAGjgacwgaQwCQYDVR0TBAIwADAd\nBgNVHQ4EFgQUsofl+9buohZVi+zSQ79MgoIV0SIwQwYDVR0jBDwwOoAUrwhgMtfE\nPfU2xdxG2cJz39D9Gq+hF6QVMBMxETAPBgNVBAMMCGJvYm8uY29tggkAj/j5+62I\naxcwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMBEGA1UdEQQKMAiC\nBnNlcnZlcjANBgkqhkiG9w0BAQsFAAOCAQEAY39LMpnrwEAMFyN59HUZBmKYGvz+\nC5MMXXP1cRYvmiyqIS5mB7JeUj2dX29gzsR0ptPkZfEMDQCGWIiv0qRI1H4OnMyI\nv8lMsVGxjLiYyU5EHXfrW24rAPhTrIC4mWGcj1vGwoSI4+CYKyx4o7tjKLEqfMzm\nVO+UEhOuXkgCo0uuFC2S8RSbQamYwh4fLEPaV+Kwb6Tcywz3UdkbRrBDh/d7gSBq\n9AB1J64ZHOqtpaSz5VKG+pbASW5J2RAh7+lqzkuH9oOAlv1jo10vFjcc292jsVo5\nRHLs0WnfGpZ+g5MULnJa1RdDveZNRBauMr33VE0s4ck0Bd16565M7S/gxA==\n-----END CERTIFICATE-----\n",
+                    "certificateChain": "-----BEGIN CERTIFICATE-----\nMIIDKzCCAhOgAwIBAgIJAI/4+futiGsXMA0GCSqGSIb3DQEBCwUAMBMxETAPBgNV\nBAMMCGJvYm8uY29tMB4XDTIwMDUwMzIxMTI1MFoXDTMwMDUwMTIxMTI1MFowEzER\nMA8GA1UEAwwIYm9iby5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB\nAQCoKydaDAgTSNv1I0CqjxvQGkn12X+2r0gNLRRBosLZVyZWxVU3gct3xGOmPxu7\nufqnPIUpkFKbLM+/qU0m/Jx3kb6V8A0m1P0bxylblLn51+KDYTJ0HWyYBde6fHPs\ndiiQmUm6qMfmiUrCLGPo5NPRZ9Eiu4foBwYYTbaSjifq9lEpnQWPnfvWzykj/O2J\nqAUMbDpFvHxONWKFJGhFP1SS+cRHf4sZqhUlKVUSbuQcNMgVPfCSwUJpReSKHicl\n6bChfmc2bph3qwtBq4nZLLSL3JK64x98TDb1hscM0xkLNnuElwZdonvHbJXZ4leU\n9Sgm6hR48Z50VenQxKjW9NrLAgMBAAGjgYEwfzAdBgNVHQ4EFgQUrwhgMtfEPfU2\nxdxG2cJz39D9Gq8wQwYDVR0jBDwwOoAUrwhgMtfEPfU2xdxG2cJz39D9Gq+hF6QV\nMBMxETAPBgNVBAMMCGJvYm8uY29tggkAj/j5+62IaxcwDAYDVR0TBAUwAwEB/zAL\nBgNVHQ8EBAMCAQYwDQYJKoZIhvcNAQELBQADggEBAAvC57HYIqKFywtUB5ptFGNJ\nxkTv2zwNGzWzAeZDCNf7wgoad+XtbnAMBkGSSlgeuVXLb09Cf6L9VsUeV55IUeEZ\n75VoP8wpoAW8B0R8PLWQs85GbclsSBXskwHytgAk9DkK53AbnwxfjcY+ymdC0bSP\n3cX+6z4dGpaOWOB5Z5YIEPBAny/NQj4Ko8s+cQEz56rZfGIHtudE/pPufDeFdeAo\nonF0caipZMsyJHxYaBhZaGTMCFFWMdH1IdYGJeTHtBU7uv/DOUHRZr91vi7VG7pI\nvvNoMhpj1sKDkfyfVeFmWkqnb7trfQ5RKseuI9Nbaq7xa82JGjEB+4YItd536X0=\n-----END CERTIFICATE-----\n",
+                    "domainName": "server",
+                    "options": {
+                        "certificateTransparencyLoggingPreference": "DISABLED"
+                    },
+                    "privateKey": "32446bb038f0d8cda16cc17d92bc7c99b06d5568",
+                    "subjectAlternativeNames": [],
+                    "tags": {},
+                    "validationMethod": "NONE"
+                },
+                "outputs": {
+                    "arn": "arn:aws:acm:eu-west-2:027065296145:certificate/505dbf40-f708-4ebb-9a89-b735417a707b",
+                    "certificateAuthorityArn": "",
+                    "certificateBody": "a8852f59cb7d9deca3095bbb5e791db8aeb60e97",
+                    "certificateChain": "e7f98923722067565dc5bc4d15ab1281b7e2c6ec",
+                    "domainName": "server",
+                    "domainValidationOptions": [],
+                    "id": "arn:aws:acm:eu-west-2:027065296145:certificate/505dbf40-f708-4ebb-9a89-b735417a707b",
+                    "options": {
+                        "certificateTransparencyLoggingPreference": "DISABLED"
+                    },
+                    "privateKey": "32446bb038f0d8cda16cc17d92bc7c99b06d5568",
+                    "subjectAlternativeNames": [],
+                    "tags": {},
+                    "validationEmails": [],
+                    "validationMethod": "NONE"
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "certificateBody": null,
+                    "certificateChain": null,
+                    "privateKey": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:iam/role:Role::webapp-role",
+                "custom": true,
+                "id": "webapp-role-4e54a78",
+                "type": "aws:iam/role:Role",
+                "inputs": {
+                    "__defaults": [
+                        "forceDetachPolicies",
+                        "maxSessionDuration",
+                        "name",
+                        "path"
+                    ],
+                    "assumeRolePolicy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"AllowAssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"ec2.amazonaws.com\",\"spotfleet.amazonaws.com\"]},\"Action\":\"sts:AssumeRole\"}]}",
+                    "description": "",
+                    "forceDetachPolicies": false,
+                    "maxSessionDuration": 3600,
+                    "name": "webapp-role-4e54a78",
+                    "path": "/",
+                    "tags": {}
+                },
+                "outputs": {
+                    "arn": "arn:aws:iam::027065296145:role/webapp-role-4e54a78",
+                    "assumeRolePolicy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"AllowAssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"ec2.amazonaws.com\",\"spotfleet.amazonaws.com\"]},\"Action\":\"sts:AssumeRole\"}]}",
+                    "createDate": "2020-05-04T07:55:06Z",
+                    "description": "",
+                    "forceDetachPolicies": false,
+                    "id": "webapp-role-4e54a78",
+                    "maxSessionDuration": 3600,
+                    "name": "webapp-role-4e54a78",
+                    "path": "/",
+                    "tags": {},
+                    "uniqueId": "AROAQMTJXUUI2WVN3Y5EY"
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "assumeRolePolicy": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:acm/certificate:Certificate::pServerCertificate",
+                "custom": true,
+                "id": "arn:aws:acm:eu-west-2:027065296145:certificate/8a0f1fe1-f031-4e3d-88de-da483ea61c86",
+                "type": "aws:acm/certificate:Certificate",
+                "inputs": {
+                    "__defaults": [],
+                    "certificateAuthorityArn": "",
+                    "certificateBody": "Certificate:\n    Data:\n        Version: 3 (0x2)\n        Serial Number:\n            e1:34:ae:22:d1:6b:64:d9:b5:45:42:1a:df:15:be:fd\n    Signature Algorithm: sha256WithRSAEncryption\n        Issuer: CN=bobo.com\n        Validity\n            Not Before: May  3 21:13:02 2020 GMT\n            Not After : Aug  6 21:13:02 2022 GMT\n        Subject: CN=server\n        Subject Public Key Info:\n            Public Key Algorithm: rsaEncryption\n                Public-Key: (2048 bit)\n                Modulus:\n                    00:bc:85:e4:8b:e4:e1:eb:07:da:be:34:01:c9:c1:\n                    ce:e3:40:c5:c3:6f:e2:ac:5d:d4:46:33:99:ce:33:\n                    4e:3c:c6:82:e0:82:10:13:f4:59:2c:92:4a:b5:0b:\n                    49:4c:c9:ab:4e:ad:3b:2e:c5:ee:0e:06:2b:c4:55:\n                    ed:e5:80:dd:cd:ee:19:e0:77:e2:3d:c6:39:79:7b:\n                    ae:1e:f9:7b:c0:ea:d4:15:c7:5c:5c:81:55:4a:a2:\n                    44:8b:42:7b:8f:83:35:d1:f8:35:07:49:e9:6f:b8:\n                    c0:51:06:11:50:a7:65:f9:4b:8d:27:e8:ac:85:3a:\n                    17:d4:d4:6a:74:d5:b9:c6:21:59:32:45:8c:8a:23:\n                    95:22:eb:54:94:69:cc:10:c1:20:6f:45:b0:4e:a6:\n                    c5:b0:e9:b1:7e:08:53:8d:fe:23:13:35:c2:4f:4a:\n                    b8:37:01:1c:ea:a8:98:49:f0:f3:97:af:bd:24:d9:\n                    4f:56:f2:9b:cb:06:a4:25:2f:86:fa:41:80:a0:a2:\n                    1b:91:9a:fa:ee:d6:37:3e:89:d5:ff:42:f9:c1:db:\n                    6e:74:41:f3:36:34:bb:7e:9b:2a:71:e3:7b:d0:fe:\n                    53:2b:6b:17:19:63:48:10:f0:12:f7:e9:43:0f:d8:\n                    df:d7:d5:8a:e6:b3:ee:fb:de:41:3e:f6:15:38:fd:\n                    37:65\n                Exponent: 65537 (0x10001)\n        X509v3 extensions:\n            X509v3 Basic Constraints: \n                CA:FALSE\n            X509v3 Subject Key Identifier: \n                B2:87:E5:FB:D6:EE:A2:16:55:8B:EC:D2:43:BF:4C:82:82:15:D1:22\n            X509v3 Authority Key Identifier: \n                keyid:AF:08:60:32:D7:C4:3D:F5:36:C5:DC:46:D9:C2:73:DF:D0:FD:1A:AF\n                DirName:/CN=bobo.com\n                serial:8F:F8:F9:FB:AD:88:6B:17\n\n            X509v3 Extended Key Usage: \n                TLS Web Server Authentication\n            X509v3 Key Usage: \n                Digital Signature, Key Encipherment\n            X509v3 Subject Alternative Name: \n                DNS:server\n    Signature Algorithm: sha256WithRSAEncryption\n         63:7f:4b:32:99:eb:c0:40:0c:17:23:79:f4:75:19:06:62:98:\n         1a:fc:fe:0b:93:0c:5d:73:f5:71:16:2f:9a:2c:aa:21:2e:66:\n         07:b2:5e:52:3d:9d:5f:6f:60:ce:c4:74:a6:d3:e4:65:f1:0c:\n         0d:00:86:58:88:af:d2:a4:48:d4:7e:0e:9c:cc:88:bf:c9:4c:\n         b1:51:b1:8c:b8:98:c9:4e:44:1d:77:eb:5b:6e:2b:00:f8:53:\n         ac:80:b8:99:61:9c:8f:5b:c6:c2:84:88:e3:e0:98:2b:2c:78:\n         a3:bb:63:28:b1:2a:7c:cc:e6:54:ef:94:12:13:ae:5e:48:02:\n         a3:4b:ae:14:2d:92:f1:14:9b:41:a9:98:c2:1e:1f:2c:43:da:\n         57:e2:b0:6f:a4:dc:cb:0c:f7:51:d9:1b:46:b0:43:87:f7:7b:\n         81:20:6a:f4:00:75:27:ae:19:1c:ea:ad:a5:a4:b3:e5:52:86:\n         fa:96:c0:49:6e:49:d9:10:21:ef:e9:6a:ce:4b:87:f6:83:80:\n         96:fd:63:a3:5d:2f:16:37:1c:db:dd:a3:b1:5a:39:44:72:ec:\n         d1:69:df:1a:96:7e:83:93:14:2e:72:5a:d5:17:43:bd:e6:4d:\n         44:16:ae:32:bd:f7:54:4d:2c:e1:c9:34:05:dd:7a:e7:ae:4c:\n         ed:2f:e0:c4\n-----BEGIN CERTIFICATE-----\nMIIDVzCCAj+gAwIBAgIRAOE0riLRa2TZtUVCGt8Vvv0wDQYJKoZIhvcNAQELBQAw\nEzERMA8GA1UEAwwIYm9iby5jb20wHhcNMjAwNTAzMjExMzAyWhcNMjIwODA2MjEx\nMzAyWjARMQ8wDQYDVQQDDAZzZXJ2ZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw\nggEKAoIBAQC8heSL5OHrB9q+NAHJwc7jQMXDb+KsXdRGM5nOM048xoLgghAT9Fks\nkkq1C0lMyatOrTsuxe4OBivEVe3lgN3N7hngd+I9xjl5e64e+XvA6tQVx1xcgVVK\nokSLQnuPgzXR+DUHSelvuMBRBhFQp2X5S40n6KyFOhfU1Gp01bnGIVkyRYyKI5Ui\n61SUacwQwSBvRbBOpsWw6bF+CFON/iMTNcJPSrg3ARzqqJhJ8POXr70k2U9W8pvL\nBqQlL4b6QYCgohuRmvru1jc+idX/QvnB2250QfM2NLt+mypx43vQ/lMraxcZY0gQ\n8BL36UMP2N/X1Yrms+773kE+9hU4/TdlAgMBAAGjgacwgaQwCQYDVR0TBAIwADAd\nBgNVHQ4EFgQUsofl+9buohZVi+zSQ79MgoIV0SIwQwYDVR0jBDwwOoAUrwhgMtfE\nPfU2xdxG2cJz39D9Gq+hF6QVMBMxETAPBgNVBAMMCGJvYm8uY29tggkAj/j5+62I\naxcwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMBEGA1UdEQQKMAiC\nBnNlcnZlcjANBgkqhkiG9w0BAQsFAAOCAQEAY39LMpnrwEAMFyN59HUZBmKYGvz+\nC5MMXXP1cRYvmiyqIS5mB7JeUj2dX29gzsR0ptPkZfEMDQCGWIiv0qRI1H4OnMyI\nv8lMsVGxjLiYyU5EHXfrW24rAPhTrIC4mWGcj1vGwoSI4+CYKyx4o7tjKLEqfMzm\nVO+UEhOuXkgCo0uuFC2S8RSbQamYwh4fLEPaV+Kwb6Tcywz3UdkbRrBDh/d7gSBq\n9AB1J64ZHOqtpaSz5VKG+pbASW5J2RAh7+lqzkuH9oOAlv1jo10vFjcc292jsVo5\nRHLs0WnfGpZ+g5MULnJa1RdDveZNRBauMr33VE0s4ck0Bd16565M7S/gxA==\n-----END CERTIFICATE-----\n",
+                    "certificateChain": "-----BEGIN CERTIFICATE-----\nMIIDKzCCAhOgAwIBAgIJAI/4+futiGsXMA0GCSqGSIb3DQEBCwUAMBMxETAPBgNV\nBAMMCGJvYm8uY29tMB4XDTIwMDUwMzIxMTI1MFoXDTMwMDUwMTIxMTI1MFowEzER\nMA8GA1UEAwwIYm9iby5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB\nAQCoKydaDAgTSNv1I0CqjxvQGkn12X+2r0gNLRRBosLZVyZWxVU3gct3xGOmPxu7\nufqnPIUpkFKbLM+/qU0m/Jx3kb6V8A0m1P0bxylblLn51+KDYTJ0HWyYBde6fHPs\ndiiQmUm6qMfmiUrCLGPo5NPRZ9Eiu4foBwYYTbaSjifq9lEpnQWPnfvWzykj/O2J\nqAUMbDpFvHxONWKFJGhFP1SS+cRHf4sZqhUlKVUSbuQcNMgVPfCSwUJpReSKHicl\n6bChfmc2bph3qwtBq4nZLLSL3JK64x98TDb1hscM0xkLNnuElwZdonvHbJXZ4leU\n9Sgm6hR48Z50VenQxKjW9NrLAgMBAAGjgYEwfzAdBgNVHQ4EFgQUrwhgMtfEPfU2\nxdxG2cJz39D9Gq8wQwYDVR0jBDwwOoAUrwhgMtfEPfU2xdxG2cJz39D9Gq+hF6QV\nMBMxETAPBgNVBAMMCGJvYm8uY29tggkAj/j5+62IaxcwDAYDVR0TBAUwAwEB/zAL\nBgNVHQ8EBAMCAQYwDQYJKoZIhvcNAQELBQADggEBAAvC57HYIqKFywtUB5ptFGNJ\nxkTv2zwNGzWzAeZDCNf7wgoad+XtbnAMBkGSSlgeuVXLb09Cf6L9VsUeV55IUeEZ\n75VoP8wpoAW8B0R8PLWQs85GbclsSBXskwHytgAk9DkK53AbnwxfjcY+ymdC0bSP\n3cX+6z4dGpaOWOB5Z5YIEPBAny/NQj4Ko8s+cQEz56rZfGIHtudE/pPufDeFdeAo\nonF0caipZMsyJHxYaBhZaGTMCFFWMdH1IdYGJeTHtBU7uv/DOUHRZr91vi7VG7pI\nvvNoMhpj1sKDkfyfVeFmWkqnb7trfQ5RKseuI9Nbaq7xa82JGjEB+4YItd536X0=\n-----END CERTIFICATE-----\n",
+                    "domainName": "server",
+                    "options": {
+                        "certificateTransparencyLoggingPreference": "DISABLED"
+                    },
+                    "privateKey": "32446bb038f0d8cda16cc17d92bc7c99b06d5568",
+                    "subjectAlternativeNames": [],
+                    "tags": {},
+                    "validationMethod": "NONE"
+                },
+                "outputs": {
+                    "arn": "arn:aws:acm:eu-west-2:027065296145:certificate/8a0f1fe1-f031-4e3d-88de-da483ea61c86",
+                    "certificateAuthorityArn": "",
+                    "certificateBody": "a8852f59cb7d9deca3095bbb5e791db8aeb60e97",
+                    "certificateChain": "e7f98923722067565dc5bc4d15ab1281b7e2c6ec",
+                    "domainName": "server",
+                    "domainValidationOptions": [],
+                    "id": "arn:aws:acm:eu-west-2:027065296145:certificate/8a0f1fe1-f031-4e3d-88de-da483ea61c86",
+                    "options": {
+                        "certificateTransparencyLoggingPreference": "DISABLED"
+                    },
+                    "privateKey": "32446bb038f0d8cda16cc17d92bc7c99b06d5568",
+                    "subjectAlternativeNames": [],
+                    "tags": {},
+                    "validationEmails": [],
+                    "validationMethod": "NONE"
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "certificateBody": null,
+                    "certificateChain": null,
+                    "privateKey": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:iam/role:Role::build-agents-role",
+                "custom": true,
+                "id": "build-agents-role-d571862",
+                "type": "aws:iam/role:Role",
+                "inputs": {
+                    "__defaults": [
+                        "forceDetachPolicies",
+                        "maxSessionDuration",
+                        "name",
+                        "path"
+                    ],
+                    "assumeRolePolicy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"AllowAssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"spotfleet.amazonaws.com\",\"ec2.amazonaws.com\"]},\"Action\":\"sts:AssumeRole\"}]}",
+                    "description": "",
+                    "forceDetachPolicies": false,
+                    "maxSessionDuration": 3600,
+                    "name": "build-agents-role-d571862",
+                    "path": "/",
+                    "tags": {}
+                },
+                "outputs": {
+                    "arn": "arn:aws:iam::027065296145:role/build-agents-role-d571862",
+                    "assumeRolePolicy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Sid\":\"AllowAssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"spotfleet.amazonaws.com\",\"ec2.amazonaws.com\"]},\"Action\":\"sts:AssumeRole\"}]}",
+                    "createDate": "2020-05-04T07:55:06Z",
+                    "description": "",
+                    "forceDetachPolicies": false,
+                    "id": "build-agents-role-d571862",
+                    "maxSessionDuration": 3600,
+                    "name": "build-agents-role-d571862",
+                    "path": "/",
+                    "tags": {},
+                    "uniqueId": "AROAQMTJXUUIRJYTM7F7N"
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "assumeRolePolicy": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:ec2/keyPair:KeyPair::dns-public-key",
+                "custom": true,
+                "id": "dns-public-key-a362369",
+                "type": "aws:ec2/keyPair:KeyPair",
+                "inputs": {
+                    "__defaults": [
+                        "keyName"
+                    ],
+                    "keyName": "dns-public-key-a362369",
+                    "publicKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDeCIYL2TQaQjGi8yQXIgKDBlM8J9dGPNv3wvPAImDLaFWG7rSus1ul0pW0qnoN81OCaccP8su/eBp3XG0W95LaMv2XoBKdW4AOh0bry1C1Dx+qbWV38eSGTz3+Kr32DTVgkd2AfaiWulKdUzOrIiHe0552YCXS/6qQO8diUb3Q6+6DGGAwviLH1kw1GugRnEqowsw8gd2ZZLH7SXZOK9WeAwF9jmTLZkZXpY9SpDQA6tIkLwq9xcTO2g77UqoV6szboNHmY57c/pXt6A5OMklOn+Q5q6EkxK/zB+RjioqaA+21FIXoUR9S6i8L/HaeP1dRsHW5Ykhgzds/Ysi0yqtD iliagerman@Ilias-MacBook-Pro.local\n    ",
+                    "tags": {}
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"1\"}",
+                    "fingerprint": "2d:62:a3:5c:04:02:46:2a:9b:81:d7:33:d6:db:c7:8d",
+                    "id": "dns-public-key-a362369",
+                    "keyName": "dns-public-key-a362369",
+                    "keyPairId": "key-0066279f37f11b82c",
+                    "publicKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDeCIYL2TQaQjGi8yQXIgKDBlM8J9dGPNv3wvPAImDLaFWG7rSus1ul0pW0qnoN81OCaccP8su/eBp3XG0W95LaMv2XoBKdW4AOh0bry1C1Dx+qbWV38eSGTz3+Kr32DTVgkd2AfaiWulKdUzOrIiHe0552YCXS/6qQO8diUb3Q6+6DGGAwviLH1kw1GugRnEqowsw8gd2ZZLH7SXZOK9WeAwF9jmTLZkZXpY9SpDQA6tIkLwq9xcTO2g77UqoV6szboNHmY57c/pXt6A5OMklOn+Q5q6EkxK/zB+RjioqaA+21FIXoUR9S6i8L/HaeP1dRsHW5Ykhgzds/Ysi0yqtD iliagerman@Ilias-MacBook-Pro.local",
+                    "tags": {}
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "publicKey": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::eks:index:Cluster::8200-cluster",
+                "custom": false,
+                "type": "eks:index:Cluster",
+                "outputs": {
+                    "kubeconfig": {
+                        "apiVersion": "v1",
+                        "clusters": [
+                            {
+                                "cluster": {
+                                    "certificate-authority-data": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01EVXdOREE0TURNME9Gb1hEVE13TURVd01qQTRNRE0wT0Zvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTzlHCkRHODJucmFlaTlkMG9ZdUNoSVEyRUx6MWN0TXI0UldTL0pQT0pFSU9RV1pvUVBkR3FUbnJLc3lZOVd3MVFxVGsKVmYzaVAwVlFjWXA4VGRQRUY2SUFoNDh5b2J0amdRdk1CeXdldTk3N3JLMGl5SzVDSkRUVy93T0NyRDRXM3ZrQQpWWUFFRjVjcWcrb3o1WXN6dDRFU0lBaER1YU5nQnBtWHA1R3ptelMvS1E3VHJEL1pWOTVId3I3N05iOGs1N1dnCnRtcnp0Q0JzWXBBV1Q2a1dNRjIzcXdqanpHT2o3WXk3N2ZEakRiS0lIVWRXN0FZWmczQUxSMjFybWNYYU5Za2oKUldmS3VFcGhISjB1MGhjRklQZkVDYzNKZlM0VFg5MkEwcjJwT0Y1UEptTG1mc3hFSGFwVUpyTS9OTkFKL0dsbQpXSStyNTZGS1dsTUZFWmVEZ09zQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFKc3pkQjBKRWp4WVBoTzhIT1lPOHNmaGF1Qm8KbGtMeEFyeFNLM2dXM0tvR0dnUFAxNTUwaW5SN3V0dW1IVS9UWnd6RFoxNTZjTXF4WFQvYm1Wb0xPT3NtSFlJNwpKdUNiblQrdy9WMjM5bG96ZnQxbjQzZk1CcEdwSEtncXhqRS9rRExpR0sxamMxTDM0Sk01d0NjcXV2UFgrMnJGCnRwdHEzKytHRjJmT0U4OFdmOWF6bmFJNVV4QzhJUHVKWHdXQm80SGhYZFFRSnF5SFJlaHZ3OVBIVC8xLzNnMlUKZ1JnODg5Vmpwd0dxNUFLQng2ZjFLT2plcFZNSE8zWjQxeWZNNGNPa0Q1Mnc2dHFEZTBaVy84dmZad2hIRU5GMgo2TXlTQndHeWNIZkJyV1JXNk9zR3JHS0pqMkR2a2x6aTMyZHJEY2J0R1hPdkJ6eVRSbko5MVhaRldRQT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=",
+                                    "server": "https://CE9E93CA3DDEBD0569F026D277CABC8C.sk1.eu-west-2.eks.amazonaws.com"
+                                },
+                                "name": "kubernetes"
+                            }
+                        ],
+                        "contexts": [
+                            {
+                                "context": {
+                                    "cluster": "kubernetes",
+                                    "user": "aws"
+                                },
+                                "name": "aws"
+                            }
+                        ],
+                        "current-context": "aws",
+                        "kind": "Config",
+                        "users": [
+                            {
+                                "name": "aws",
+                                "user": {
+                                    "exec": {
+                                        "apiVersion": "client.authentication.k8s.io/v1alpha1",
+                                        "args": [
+                                            "eks",
+                                            "get-token",
+                                            "--cluster-name",
+                                            "8200-cluster-eksCluster-1c992c9"
+                                        ],
+                                        "command": "aws"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "dependencies": [
+                    "urn:pulumi:8200::8200::aws:iam/role:Role::build-agents-role",
+                    "urn:pulumi:8200::8200::aws:iam/role:Role::webapp-role"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:SecurityGroup::securityGroup",
+                "custom": false,
+                "type": "awsx:x:ec2:SecurityGroup",
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200"
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "custom": false,
+                "type": "awsx:x:ec2:Vpc",
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200"
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:iam/rolePolicyAttachment:RolePolicyAttachment::build-agents-role-policy-0",
+                "custom": true,
+                "id": "build-agents-role-d571862-20200504075507638800000006",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "__defaults": [],
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+                    "role": "build-agents-role-d571862"
+                },
+                "outputs": {
+                    "id": "build-agents-role-d571862-20200504075507638800000006",
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+                    "role": "build-agents-role-d571862"
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "dependencies": [
+                    "urn:pulumi:8200::8200::aws:iam/role:Role::build-agents-role"
+                ],
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:8200::8200::aws:iam/role:Role::build-agents-role"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:iam/instanceProfile:InstanceProfile::webapp-profile",
+                "custom": true,
+                "id": "webapp-profile-2e50382",
+                "type": "aws:iam/instanceProfile:InstanceProfile",
+                "inputs": {
+                    "__defaults": [
+                        "name",
+                        "path"
+                    ],
+                    "name": "webapp-profile-2e50382",
+                    "path": "/",
+                    "role": "webapp-role-4e54a78",
+                    "roles": [
+                        "webapp-role-4e54a78"
+                    ]
+                },
+                "outputs": {
+                    "arn": "arn:aws:iam::027065296145:instance-profile/webapp-profile-2e50382",
+                    "createDate": "2020-05-04T07:55:07Z",
+                    "id": "webapp-profile-2e50382",
+                    "name": "webapp-profile-2e50382",
+                    "path": "/",
+                    "role": "webapp-role-4e54a78",
+                    "roles": [
+                        "webapp-role-4e54a78"
+                    ],
+                    "uniqueId": "AIPAQMTJXUUIVMNLCR7GE"
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "dependencies": [
+                    "urn:pulumi:8200::8200::aws:iam/role:Role::webapp-role"
+                ],
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "role": [
+                        "urn:pulumi:8200::8200::aws:iam/role:Role::webapp-role"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:iam/rolePolicyAttachment:RolePolicyAttachment::webapp-role-policy-0",
+                "custom": true,
+                "id": "webapp-role-4e54a78-20200504075507597900000003",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "__defaults": [],
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+                    "role": "webapp-role-4e54a78"
+                },
+                "outputs": {
+                    "id": "webapp-role-4e54a78-20200504075507597900000003",
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
+                    "role": "webapp-role-4e54a78"
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "dependencies": [
+                    "urn:pulumi:8200::8200::aws:iam/role:Role::webapp-role"
+                ],
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:8200::8200::aws:iam/role:Role::webapp-role"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:iam/instanceProfile:InstanceProfile::build-agents-profile",
+                "custom": true,
+                "id": "build-agents-profile-ba10f96",
+                "type": "aws:iam/instanceProfile:InstanceProfile",
+                "inputs": {
+                    "__defaults": [
+                        "name",
+                        "path"
+                    ],
+                    "name": "build-agents-profile-ba10f96",
+                    "path": "/",
+                    "role": "build-agents-role-d571862",
+                    "roles": [
+                        "build-agents-role-d571862"
+                    ]
+                },
+                "outputs": {
+                    "arn": "arn:aws:iam::027065296145:instance-profile/build-agents-profile-ba10f96",
+                    "createDate": "2020-05-04T07:55:07Z",
+                    "id": "build-agents-profile-ba10f96",
+                    "name": "build-agents-profile-ba10f96",
+                    "path": "/",
+                    "role": "build-agents-role-d571862",
+                    "roles": [
+                        "build-agents-role-d571862"
+                    ],
+                    "uniqueId": "AIPAQMTJXUUIVMHAJJLFK"
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "dependencies": [
+                    "urn:pulumi:8200::8200::aws:iam/role:Role::build-agents-role"
+                ],
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "role": [
+                        "urn:pulumi:8200::8200::aws:iam/role:Role::build-agents-role"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:iam/rolePolicyAttachment:RolePolicyAttachment::build-agents-role-policy-1",
+                "custom": true,
+                "id": "build-agents-role-d571862-20200504075507588000000002",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "__defaults": [],
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+                    "role": "build-agents-role-d571862"
+                },
+                "outputs": {
+                    "id": "build-agents-role-d571862-20200504075507588000000002",
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+                    "role": "build-agents-role-d571862"
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "dependencies": [
+                    "urn:pulumi:8200::8200::aws:iam/role:Role::build-agents-role"
+                ],
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:8200::8200::aws:iam/role:Role::build-agents-role"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:iam/rolePolicyAttachment:RolePolicyAttachment::build-agents-role-policy-2",
+                "custom": true,
+                "id": "build-agents-role-d571862-20200504075507577000000001",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "__defaults": [],
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess",
+                    "role": "build-agents-role-d571862"
+                },
+                "outputs": {
+                    "id": "build-agents-role-d571862-20200504075507577000000001",
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess",
+                    "role": "build-agents-role-d571862"
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "dependencies": [
+                    "urn:pulumi:8200::8200::aws:iam/role:Role::build-agents-role"
+                ],
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:8200::8200::aws:iam/role:Role::build-agents-role"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:iam/rolePolicyAttachment:RolePolicyAttachment::webapp-role-policy-1",
+                "custom": true,
+                "id": "webapp-role-4e54a78-20200504075507603100000004",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "__defaults": [],
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+                    "role": "webapp-role-4e54a78"
+                },
+                "outputs": {
+                    "id": "webapp-role-4e54a78-20200504075507603100000004",
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy",
+                    "role": "webapp-role-4e54a78"
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "dependencies": [
+                    "urn:pulumi:8200::8200::aws:iam/role:Role::webapp-role"
+                ],
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:8200::8200::aws:iam/role:Role::webapp-role"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:iam/rolePolicyAttachment:RolePolicyAttachment::webapp-role-policy-2",
+                "custom": true,
+                "id": "webapp-role-4e54a78-20200504075507615800000005",
+                "type": "aws:iam/rolePolicyAttachment:RolePolicyAttachment",
+                "inputs": {
+                    "__defaults": [],
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+                    "role": "webapp-role-4e54a78"
+                },
+                "outputs": {
+                    "id": "webapp-role-4e54a78-20200504075507615800000005",
+                    "policyArn": "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly",
+                    "role": "webapp-role-4e54a78"
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "dependencies": [
+                    "urn:pulumi:8200::8200::aws:iam/role:Role::webapp-role"
+                ],
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "policyArn": null,
+                    "role": [
+                        "urn:pulumi:8200::8200::aws:iam/role:Role::webapp-role"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:InternetGateway::8200-vpc",
+                "custom": false,
+                "type": "awsx:x:ec2:InternetGateway",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc"
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:NatGateway::8200-vpc-0",
+                "custom": false,
+                "type": "awsx:x:ec2:NatGateway",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc"
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-private-subnet-2-private-0",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-private-subnet-2-private-0"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-private-subnet-1-private-0",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-private-subnet-1-private-0"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-vpn-private-subnet-4-private-0",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-vpn-private-subnet-4-private-0"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-private-subnet-3-private-0",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-private-subnet-3-private-0"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:SecurityGroup$awsx:x:ec2:EgressSecurityGroupRule::outbound-access",
+                "custom": false,
+                "type": "awsx:x:ec2:EgressSecurityGroupRule",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:SecurityGroup::securityGroup"
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:SecurityGroup$awsx:x:ec2:IngressSecurityGroupRule::inbound-access",
+                "custom": false,
+                "type": "awsx:x:ec2:IngressSecurityGroupRule",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:SecurityGroup::securityGroup"
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-public-nat-subnet-public-0",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-public-nat-subnet-public-0"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$aws:ec2/vpc:Vpc::8200-vpc",
+                "custom": true,
+                "id": "vpc-0bf0ab8f53ce8602a",
+                "type": "aws:ec2/vpc:Vpc",
+                "inputs": {
+                    "__defaults": [],
+                    "assignGeneratedIpv6CidrBlock": false,
+                    "cidrBlock": "10.0.0.0/16",
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "instanceTenancy": "default",
+                    "tags": {}
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:eu-west-2:027065296145:vpc/vpc-0bf0ab8f53ce8602a",
+                    "assignGeneratedIpv6CidrBlock": false,
+                    "cidrBlock": "10.0.0.0/16",
+                    "defaultNetworkAclId": "acl-03023775bbb24c5b0",
+                    "defaultRouteTableId": "rtb-046d8212ae42b94e5",
+                    "defaultSecurityGroupId": "sg-00452c68573048861",
+                    "dhcpOptionsId": "dopt-12f8657b",
+                    "enableDnsHostnames": true,
+                    "enableDnsSupport": true,
+                    "id": "vpc-0bf0ab8f53ce8602a",
+                    "instanceTenancy": "default",
+                    "ipv6AssociationId": "",
+                    "ipv6CidrBlock": "",
+                    "mainRouteTableId": "rtb-046d8212ae42b94e5",
+                    "ownerId": "027065296145",
+                    "tags": {}
+                },
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_1_31_0::85d733da-f72b-4fcb-bc40-3e40f564a1d3",
+                "propertyDependencies": {
+                    "assignGeneratedIpv6CidrBlock": null,
+                    "cidrBlock": null,
+                    "enableDnsHostnames": null,
+                    "enableDnsSupport": null,
+                    "instanceTenancy": null
+                },
+                "aliases": [
+                    "urn:pulumi:8200::8200::aws:ec2/vpc:Vpc::8200-vpc"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::pulumi:providers:pulumi-nodejs::default",
+                "custom": true,
+                "id": "557f3c0d-eb5b-4bfb-b19c-0982c98f369e",
+                "type": "pulumi:providers:pulumi-nodejs"
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:InternetGateway$aws:ec2/internetGateway:InternetGateway::8200-vpc",
+                "custom": true,
+                "id": "igw-06f2aac756056126b",
+                "type": "aws:ec2/internetGateway:InternetGateway",
+                "inputs": {
+                    "__defaults": [],
+                    "tags": {},
+                    "vpcId": "vpc-0bf0ab8f53ce8602a"
+                },
+                "outputs": {
+                    "id": "igw-06f2aac756056126b",
+                    "ownerId": "027065296145",
+                    "tags": {},
+                    "vpcId": "vpc-0bf0ab8f53ce8602a"
+                },
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:InternetGateway::8200-vpc",
+                "dependencies": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$aws:ec2/vpc:Vpc::8200-vpc"
+                ],
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_1_31_0::85d733da-f72b-4fcb-bc40-3e40f564a1d3",
+                "propertyDependencies": {
+                    "vpcId": [
+                        "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$aws:ec2/vpc:Vpc::8200-vpc"
+                    ]
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::aws:ec2/securityGroup:SecurityGroup::clustersg",
+                "custom": true,
+                "id": "sg-094e36eeb33cec602",
+                "type": "aws:ec2/securityGroup:SecurityGroup",
+                "inputs": {
+                    "__defaults": [
+                        "name",
+                        "revokeRulesOnDelete"
+                    ],
+                    "description": "Managed by Pulumi",
+                    "egress": [],
+                    "ingress": [],
+                    "name": "clustersg-374f392",
+                    "revokeRulesOnDelete": false,
+                    "tags": {},
+                    "vpcId": "vpc-060cc946e16dc9c6e"
+                },
+                "outputs": {
+                    "__meta": "{\"schema_version\":\"1\"}",
+                    "arn": "arn:aws:ec2:eu-west-2:027065296145:security-group/sg-094e36eeb33cec602",
+                    "description": "Managed by Pulumi",
+                    "egress": [],
+                    "id": "sg-094e36eeb33cec602",
+                    "ingress": [],
+                    "name": "clustersg-374f392",
+                    "ownerId": "027065296145",
+                    "revokeRulesOnDelete": false,
+                    "tags": {},
+                    "vpcId": "vpc-060cc946e16dc9c6e"
+                },
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200",
+                "provider": "urn:pulumi:8200::8200::pulumi:providers:aws::default_2_2_0::e1a4ea76-11f8-41d8-b4f6-55187dcb717f",
+                "propertyDependencies": {
+                    "description": null,
+                    "ingress": null
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::jenkins:jenkins:Instance::jenkins",
+                "custom": false,
+                "type": "jenkins:jenkins:Instance",
+                "parent": "urn:pulumi:8200::8200::pulumi:pulumi:Stack::8200-8200"
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::pulumi:providers:kubernetes::default_2_0_0",
+                "custom": true,
+                "id": "ef131ec5-b720-4929-9302-d3286a596084",
+                "type": "pulumi:providers:kubernetes",
+                "inputs": {
+                    "version": "2.0.0"
+                },
+                "outputs": {
+                    "version": "2.0.0"
+                }
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:NatGateway::8200-vpc-2",
+                "custom": false,
+                "type": "awsx:x:ec2:NatGateway",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc"
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:NatGateway::8200-vpc-1",
+                "custom": false,
+                "type": "awsx:x:ec2:NatGateway",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc"
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-private-subnet-1-private-1",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-private-subnet-1-private-1"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-private-subnet-1-private-2",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-private-subnet-1-private-2"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-private-subnet-3-private-1",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-private-subnet-3-private-1"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-private-subnet-2-private-1",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-private-subnet-2-private-1"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-private-subnet-3-private-2",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-private-subnet-3-private-2"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-vpn-private-subnet-4-private-2",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-vpn-private-subnet-4-private-2"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-public-nat-subnet-public-1",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-public-nat-subnet-public-1"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-vpn-private-subnet-4-private-1",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-vpn-private-subnet-4-private-1"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-public-nat-subnet-public-2",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-public-nat-subnet-public-2"
+                ]
+            },
+            {
+                "urn": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc$awsx:x:ec2:Subnet::8200-vpc-private-subnet-2-private-2",
+                "custom": false,
+                "type": "awsx:x:ec2:Subnet",
+                "parent": "urn:pulumi:8200::8200::awsx:x:ec2:Vpc::8200-vpc",
+                "aliases": [
+                    "urn:pulumi:8200::8200::awsx:x:ec2:Subnet::8200-vpc-private-subnet-2-private-2"
+                ]
+            }
+        ],
+        "pending_operations": [
+            
+        ]
+    }
+}
