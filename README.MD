@@ -42,5 +42,7 @@ This can be solved by executing the code from AWS peered VPC.
 
 VPN connection requires manual steps: need to add route (0.0.0.0/0) and ingress authorization (0.0.0.0/0) (due to lack of support from pulumi / TF)
 
+After the execution is completed the vpn endpoint will be exported, please replace it in the vpn file under resources folder.
+openvpn client or Tunnelblick can be used to connect.
 
 Before running the solution please change the arn user in index.ts line 9.
