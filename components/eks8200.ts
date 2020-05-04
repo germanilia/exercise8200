@@ -6,7 +6,8 @@ import { Subnet } from "@pulumi/awsx/ec2/subnet";
 export function createEKS(
   eksSubnets: Subnet[],
   projectName: string,
-  vpcId: Output<string>
+  vpcId: Output<string>,
+  user: string
 ): eks.Cluster {
   const webappRole = createRole("webapp-role", [
     "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy",
@@ -56,7 +57,7 @@ export function createEKS(
       roleMappings: [
         {
           username: "Ilia.German",
-          roleArn: "arn:aws:iam::021320832615:user/Ilia.German",
+          roleArn: user,
           groups: ["system:masters"],
         },
       ],

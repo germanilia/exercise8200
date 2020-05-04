@@ -6,6 +6,8 @@ import * as dns8200 from "./components/dns8200";
 import * as dockerRegistry8200 from "./components/dockerRegistry8200";
 import * as nginx8200 from "./components/nginx8200";
 
+const user: string = "arn:aws:iam::021320832615:user/Ilia.German";
+
 const vpc = vpc8200.createVPC();
 const authenticationCertificate = acm8200.importClientCertificates(
   "pAuthenticationCertificate"
@@ -23,7 +25,12 @@ const vpn = vpn8200.VPN8200(
   dns
 );
 
-const cluster8200 = eks8200.createEKS(vpc.eksVPC, "8200-cluster", vpc.vpcId);
+const cluster8200 = eks8200.createEKS(
+  vpc.eksVPC,
+  "8200-cluster",
+  vpc.vpcId,
+  user
+);
 const nginxService = nginx8200.createNginx(cluster8200);
 
 export const vpcId = vpc.vpcId;
