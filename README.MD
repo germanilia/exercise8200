@@ -41,3 +41,6 @@ During the initial deployment EKS creation will fail, due to lake of access, nee
 This can be solved by executing the code from AWS peered VPC.
 
 VPN connection requires manual steps: need to add route (0.0.0.0/0) and ingress authorization (0.0.0.0/0) (due to lack of support from pulumi / TF)
+
+
+Before running the solution please change the arn user in index.ts line 9.
